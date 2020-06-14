@@ -1,0 +1,32 @@
+ENVIRONMENT = "release"
+SYS_LOG_PATH = "/data/logs"
+
+SYSTEM_ADMINS = "huteng"
+LDAP_ADDR = "ldap.int.luojilab.com:389"
+
+TASK_CENTER_HOST = "http://taskcenter.int.sao.cn"
+
+[app]
+  args = []
+  addr = ":1816"
+
+[app.logger]
+  level = "DEBUG"
+  name = "application"
+
+#
+# neo settings
+#
+[neo]
+  [neo.logger]
+  level = "INFO"
+
+[gateway]
+	testing = "10.174.88.128:9090"
+	simulation = "10.30.94.26:9090"
+#	production = "10.81.28.135:9090"  #iget
+	production = "10.81.11.132:9090"  #shzf
+
+[mongo]
+	addr = "mongodb://10.30.250.220:27017"
+	dbName = "taskcenter-admin-master"

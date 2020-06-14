@@ -1,0 +1,25 @@
+ENVIRONMENT = "debug"
+SYS_LOG_PATH = "/data/logs/"
+
+TASK_CENTER_HOST = "http://localhost:7726"
+
+SYSTEM_ADMINS = "huteng"
+LDAP_ADDR = "ldap.int.luojilab.com:389"
+
+[app]
+  args = []
+  addr = ":1814"
+
+  [app.logger]
+    level = "DEBUG"
+    name = "application"
+#
+# neo settings
+#
+[neo]
+  [neo.logger]
+  level = "INFO"
+
+[mongo]
+	addr = "mongodb://127.0.0.1:27017"
+	dbName = "gateway"
